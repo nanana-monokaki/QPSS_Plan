@@ -25,8 +25,23 @@ function doPost(e) {
   }
   // --------------------------------------------------
 
-  // 1. SlackのURL検証(url_verification)対応
-  const postData = (e && e.postData && e.postData.contents) ? JSON.parse(e.postData.contents) : null;
+  // 1. SlackのURL検証(url_verification)対応、およびボタン押下(Interactive)対応
+  let postData = null;
+  let interactivePayload = null;
+
+  // SlackのコマンドやInteractiveメッセージは application/x-www-form-urlencoded で payload というキーに入ってくる
+  if (e && e.parameter && e.parameter.payload) {
+    interactivePayload = JSON.parse(e.parameter.payload);
+  } else if (e && e.postData && e.postData.contents) {
+    postData = JSON.parse(e.postData.contents);
+  }
+
+  // --- インタラクティブ (ボタン押下) の処理 ---
+  if (interactivePayload) {
+    return handleSlackInteractivePayload(interactivePayload);
+  }
+
+  // --- URL検証の処理 ---
   if (postData && postData.type === 'url_verification') {
     return ContentService.createTextOutput(postData.challenge);
   }
@@ -63,14 +78,18 @@ function doPost(e) {
       // 4. OCR処理による文字抽出
       const ocrText = extractTextWithOCR(driveFile.getId());
 
-      // 5. 名目推論や金額などの抽出（簡易実装）
-      const extractedData = parseOCRText(ocrText);
+      // 設定シートの準備と読み込み (sheet_handler.js側で定義した関数を利用)
+      const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+      const settingsMap = ensureSettingsSheet(ss);
 
-      // 6. スプレッドシートへの記録
-      recordToSpreadsheet(extractedData, driveFile.getUrl(), event);
+      // 5. 名目推論や金額などの抽出
+      const extractedData = parseOCRText(ocrText, settingsMap);
 
-      // 7. （オプション）Slackへのフィードバック通知
-      // notifyToSlack(event.channel, "レシートを処理しました。", extractedData);
+      // 6. スプレッドシートへの記録 (内部で行番号と重複フラグを取得するため少し改修が必要だが、現状はそのまま記録し直後に最新情報を取る)
+      const recordResult = recordToSpreadsheet(extractedData, driveFile.getUrl(), event);
+
+      // 7. Slackへの対話型ボタン付き通知（Approve / Reject）
+      sendSlackInteractiveMessage(event.channel, extractedData, recordResult, settingsMap);
 
     } catch (error) {
       console.error("Error processing message: " + error.toString() + "\nStack: " + error.stack);
@@ -104,7 +123,7 @@ function doPost(e) {
 /**
  * OCRテキストからGemini APIを利用して金額や店舗名、カテゴリを抽出する
  */
-function parseOCRText(text) {
+function parseOCRText(text, settingsMap) {
   // 環境変数のチェック
   if (!GEMINI_API_KEY) {
     console.error("GEMINI_API_KEY is not set.");
@@ -117,7 +136,6 @@ function parseOCRText(text) {
     };
   }
 
-  // Gemini APIエンドポイント (gemini-1.5-flashを推奨)
   // 利用可能なGeminiモデルを動的に取得して使用する（バージョンアップによる404エラー対策）
   let modelName = "models/gemini-2.0-flash"; // デフォルト
   try {
@@ -143,6 +161,10 @@ function parseOCRText(text) {
 
   const url = `https://generativelanguage.googleapis.com/v1beta/${modelName}:generateContent?key=${GEMINI_API_KEY}`;
 
+  // 利用可能なカテゴリーのリストを生成
+  const availableCategories = Object.keys(settingsMap || {}).join("、");
+  const categoryHint = availableCategories ? availableCategories : "消耗品費、交通費、交際費、会議費など";
+
   // プロンプトの構築
   const prompt = `
 以下のテキストはレシート（または領収書）をOCRで読み取った結果です。
@@ -152,7 +174,7 @@ function parseOCRText(text) {
 1. "date": 支払日付 (yyyy/MM/dd形式。年が不明な場合は推測するか現在の年を使用)
 2. "storeName": 店舗名や支払先
 3. "totalAmount": 合計金額 (数値のみ。カンマや「円」などは取り除く)
-4. "category": 経費のカテゴリ (例: 消耗品費、交通費、交際費、会議費など。推測で構いません。不明な場合は "未分類")
+4. "category": 経費のカテゴリ（必ず以下のいずれかから推測して完全一致で選択してください: ${categoryHint}。推測できない場合は "未分類"）
 
 【制約事項】
 - 返答は必ず純粋なJSON文字列のみにしてください。
