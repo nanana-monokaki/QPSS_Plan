@@ -67,8 +67,12 @@ function doPost(e) {
       // 最初のファイルを処理（複数ある場合は拡張可能）
       const file = event.files[0];
 
-      // 画像ファイルかどうかの確認
-      if (file.mimetype.indexOf('image/') !== 0 && file.mimetype !== 'application/pdf') {
+      // 画像ファイルまたはPDFかどうかの確認 (MIMEタイプが空にされる場合へのフォールバック対応)
+      const mime = file.mimetype || "";
+      const isImage = mime.indexOf('image/') === 0 || file.name.match(/\.(jpg|jpeg|png|gif)$/i);
+      const isPdf = mime === 'application/pdf' || file.name.match(/\.pdf$/i);
+
+      if (!isImage && !isPdf) {
         return ContentService.createTextOutput("OK");
       }
 

@@ -30,7 +30,7 @@ function saveFileToDrive(fileEventAuth, slackToken) {
     const minutes = ('0' + today.getMinutes()).slice(-2);
 
     const formattedDate = `${year}${month}${date}_${hours}${minutes}`;
-    const extension = getFileExtension(fileEventAuth.mimetype);
+    const extension = getFileExtension(fileEventAuth.mimetype, fileEventAuth.name);
     const newFileName = `receipt_${formattedDate}.${extension}`;
 
     blob.setName(newFileName);
@@ -75,12 +75,19 @@ function getTargetFolder(year, month) {
 }
 
 /**
- * MimeTypeから拡張子を簡易推定
+ * MimeTypeやファイル名から拡張子を簡易推定
  */
-function getFileExtension(mimeType) {
+function getFileExtension(mimeType, fileName) {
     if (mimeType === 'image/jpeg') return 'jpg';
     if (mimeType === 'image/png') return 'png';
     if (mimeType === 'application/pdf') return 'pdf';
+
+    // Fallback to filename
+    if (fileName) {
+        const extMatch = fileName.match(/\.([a-zA-Z0-9]+)$/);
+        if (extMatch) return extMatch[1].toLowerCase();
+    }
+
     return 'bin';
 }
 
