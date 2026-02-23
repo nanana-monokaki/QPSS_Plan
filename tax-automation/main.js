@@ -4,6 +4,7 @@ const PROPERTIES = PropertiesService.getScriptProperties();
 const SLACK_BOT_TOKEN = PROPERTIES.getProperty('SLACK_BOT_TOKEN');
 const SPREADSHEET_ID = PROPERTIES.getProperty('SPREADSHEET_ID');
 const TARGET_CHANNEL_ID = PROPERTIES.getProperty('TARGET_CHANNEL_ID'); // 対象のチャンネルID（例: C01234567）
+const GEMINI_API_KEY = PROPERTIES.getProperty('GEMINI_API_KEY'); // 追加: Gemini APIキー
 
 /**
  * SlackからのEvents API / Webhooks 受信エンドポイント
@@ -101,23 +102,94 @@ function doPost(e) {
 }
 
 /**
- * OCRテキストから簡易的に金額や店舗名を抽出する
+ * OCRテキストからGemini APIを利用して金額や店舗名、カテゴリを抽出する
  */
 function parseOCRText(text) {
-  // ※実装計画に基づいて、まずは簡易な抽出ロジックを用意
-  const data = {
+  // 環境変数のチェック
+  if (!GEMINI_API_KEY) {
+    console.error("GEMINI_API_KEY is not set.");
+    return {
+      date: Utilities.formatDate(new Date(), "JST", "yyyy/MM/dd"),
+      storeName: "GEMINI_API_KEY未設定",
+      totalAmount: 0,
+      category: "未分類",
+      rawText: text
+    };
+  }
+
+  // Gemini APIエンドポイント (gemini-1.5-flashを推奨)
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+
+  // プロンプトの構築
+  const prompt = `
+以下のテキストはレシート（または領収書）をOCRで読み取った結果です。
+このテキストから以下の4つの情報を抽出し、JSONフォーマットのみで出力してください。Markdownのコードブロック( \`\`\`json など )は含めないでください。
+
+【抽出項目】
+1. "date": 支払日付 (yyyy/MM/dd形式。年が不明な場合は推測するか現在の年を使用)
+2. "storeName": 店舗名や支払先
+3. "totalAmount": 合計金額 (数値のみ。カンマや「円」などは取り除く)
+4. "category": 経費のカテゴリ (例: 消耗品費、交通費、交際費、会議費など。推測で構いません。不明な場合は "未分類")
+
+【制約事項】
+- 返答は必ず純粋なJSON文字列のみにしてください。
+- フォーマット外の会話や説明は一切不要です。
+- 合計金額が取得できなかった場合は 0 を指定してください。
+
+【テキスト】
+${text}
+`;
+
+  const payload = {
+    contents: [{
+      parts: [{
+        text: prompt
+      }]
+    }]
+  };
+
+  const options = {
+    method: "post",
+    contentType: "application/json",
+    payload: JSON.stringify(payload),
+    muteHttpExceptions: true
+  };
+
+  try {
+    const response = UrlFetchApp.fetch(url, options);
+    const responseCode = response.getResponseCode();
+    const responseBody = response.getContentText();
+
+    if (responseCode === 200) {
+      const data = JSON.parse(responseBody);
+      // Geminiのレスポンス構造からテキストを抽出
+      let resultText = data.candidates[0].content.parts[0].text;
+      
+      // もしMarkdownのコードブロックが含まれていた場合は除去する
+      resultText = resultText.replace(/```json/g, "").replace(/```/g, "").trim();
+
+      const parsedJSON = JSON.parse(resultText);
+
+      return {
+        date: parsedJSON.date || Utilities.formatDate(new Date(), "JST", "yyyy/MM/dd"),
+        storeName: parsedJSON.storeName || "不明",
+        totalAmount: parseInt(parsedJSON.totalAmount) || 0,
+        category: parsedJSON.category || "未分類",
+        rawText: text
+      };
+    } else {
+      console.error(`Gemini API Error: ${responseCode} - ${responseBody}`);
+    }
+  } catch (e) {
+    console.error(`parseOCRText Error: ${e.message}\n${e.stack}`);
+  }
+
+  // API呼び出しに失敗した場合のフォールバック
+  return {
     date: Utilities.formatDate(new Date(), "JST", "yyyy/MM/dd"),
-    storeName: "OCR抽出結果要確認",
+    storeName: "OCR解析エラー",
     totalAmount: 0,
     category: "未分類",
     rawText: text
   };
-
-  // 金額の抽出（「合計 ¥1,000」などを想定したシンプルな正規表現）
-  const amountMatch = text.match(/[\¥\\]\s*([0-9,]+)/);
-  if (amountMatch && amountMatch[1]) {
-    data.totalAmount = parseInt(amountMatch[1].replace(/,/g, ''), 10);
-  }
-
-  return data;
 }
