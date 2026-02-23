@@ -118,7 +118,30 @@ function parseOCRText(text) {
   }
 
   // Gemini APIエンドポイント (gemini-1.5-flashを推奨)
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+  // 利用可能なGeminiモデルを動的に取得して使用する（バージョンアップによる404エラー対策）
+  let modelName = "models/gemini-2.0-flash"; // デフォルト
+  try {
+    const listUrl = `https://generativelanguage.googleapis.com/v1beta/models?key=${GEMINI_API_KEY}`;
+    const listResponse = UrlFetchApp.fetch(listUrl, { muteHttpExceptions: true });
+    if (listResponse.getResponseCode() === 200) {
+      const data = JSON.parse(listResponse.getContentText());
+      if (data.models && data.models.length > 0) {
+        // flashモデルかつgenerateContent対応のものを優先
+        const flashModel = data.models.find(m => m.name.includes("flash") && m.supportedGenerationMethods && m.supportedGenerationMethods.includes("generateContent"));
+        if (flashModel) {
+          modelName = flashModel.name;
+        } else {
+          // なければgenerateContent対応の最初のモデル
+          const anyModel = data.models.find(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes("generateContent"));
+          if (anyModel) modelName = anyModel.name;
+        }
+      }
+    }
+  } catch (e) {
+    console.error("Failed to list models: " + e);
+  }
+
+  const url = `https://generativelanguage.googleapis.com/v1beta/${modelName}:generateContent?key=${GEMINI_API_KEY}`;
 
   // プロンプトの構築
   const prompt = `
