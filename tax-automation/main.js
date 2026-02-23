@@ -164,7 +164,7 @@ ${text}
       const data = JSON.parse(responseBody);
       // Geminiのレスポンス構造からテキストを抽出
       let resultText = data.candidates[0].content.parts[0].text;
-      
+
       // もしMarkdownのコードブロックが含まれていた場合は除去する
       resultText = resultText.replace(/```json/g, "").replace(/```/g, "").trim();
 
@@ -179,9 +179,11 @@ ${text}
       };
     } else {
       console.error(`Gemini API Error: ${responseCode} - ${responseBody}`);
+      logToErrorSheet(`Gemini API HTTP Error: ${responseCode}`, responseBody, text);
     }
   } catch (e) {
     console.error(`parseOCRText Error: ${e.message}\n${e.stack}`);
+    logToErrorSheet(`parseOCRText Catch Error: ${e.message}`, e.stack, text);
   }
 
   // API呼び出しに失敗した場合のフォールバック
@@ -193,3 +195,26 @@ ${text}
     rawText: text
   };
 }
+
+/**
+ * プロセス中に発生した非致死的なエラーをスプレッドシートに記録する
+ */
+function logToErrorSheet(errorMsg, detail, extraInfo) {
+  try {
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    let logSheet = ss.getSheetByName("System_ErrorLog");
+    if (!logSheet) {
+      logSheet = ss.insertSheet("System_ErrorLog");
+      logSheet.appendRow(["発生日時", "エラー内容", "詳細（スタック等）", "付加情報"]);
+    }
+    logSheet.appendRow([
+      new Date(),
+      errorMsg,
+      detail,
+      extraInfo
+    ]);
+  } catch (e) {
+    console.error("Failed to write to ErrorSheet: " + e.toString());
+  }
+}
+
