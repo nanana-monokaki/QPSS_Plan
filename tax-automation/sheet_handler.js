@@ -22,8 +22,9 @@ function recordToSpreadsheet(extractedData, fileUrl, event) {
         // 最初の行を固定
         sheet.setFrozenRows(1);
 
-        // D列（名目）にプルダウン（入力規則）を設定
+        // D列（名目）とH列（経費フラグ）にプルダウン（入力規則）を設定
         applyDataValidationToCategoryColumn(sheet, ss);
+        applyDataValidationToExpenseFlagColumn(sheet);
     }
 
     // 重複チェック
@@ -47,7 +48,7 @@ function recordToSpreadsheet(extractedData, fileUrl, event) {
         extractedData.totalAmount,// E列: 総額
         presetRatio,              // F列: 按分率
         `=Erow*Frow`,             // G列: 経費計上額（実際には書き込み行番号に置換される）
-        "ON",                     // H列: 経費フラグ
+        "経費",                   // H列: 経費フラグ (ON -> 経費)
         fileUrl,                  // I列: 証憑URL
         `OCR生データ: ${extractedData.rawText.substring(0, 50)}...`, // J列: 備考/修正メモ
         isDuplicate ? "重複の可能性あり" : "" // K列: 重複警告
@@ -125,6 +126,19 @@ function applyDataValidationToCategoryColumn(sheet, ss) {
 
     // D列（2行目以降）に設定
     sheet.getRange("D2:D").setDataValidation(rule);
+}
+
+/**
+ * シートのH列（経費フラグ）に「経費」「-」のプルダウンリストを設定する
+ */
+function applyDataValidationToExpenseFlagColumn(sheet) {
+    const rule = SpreadsheetApp.newDataValidation()
+        .requireValueInList(["経費", "-"], true)
+        .setAllowInvalid(true)
+        .build();
+
+    // H列（2行目以降）に設定
+    sheet.getRange("H2:H").setDataValidation(rule);
 }
 
 /**

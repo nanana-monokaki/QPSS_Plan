@@ -134,12 +134,12 @@ function handleSlackInteractivePayload(payload) {
             let newMessageText = "";
 
             if (valueData.action === "approve") {
-                // Approveの場合、すでにデフォルトでONなので特に変えなくてもよいが、念のためチェック
-                flagRange.setValue("ON");
+                // Approveの場合、すでにデフォルトで「経費」なので特に変えなくてもよいが、念のためチェック
+                flagRange.setValue("経費");
                 newMessageText = `:white_check_mark: *@[${user}]* によって「経費として計上 (Approve)」されました。`;
             } else if (valueData.action === "reject") {
-                // Rejectの場合、フラグをOFFにする
-                flagRange.setValue("OFF");
+                // Rejectの場合、フラグを「-」にする
+                flagRange.setValue("-");
                 newMessageText = `:x: *@[${user}]* によって「対象外 (Reject)」とされました。`;
             }
 
