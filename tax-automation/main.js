@@ -81,39 +81,39 @@ function doPost(e) {
     // ------------------------------------------
 
     try {
-      // 最初のファイルを処理（複数ある場合は拡張可能）
-      const file = event.files[0];
+      // 添付された全てのファイルをループして処理
+      for (let i = 0; i < event.files.length; i++) {
+        const file = event.files[i];
 
-      // 画像ファイルまたはPDFかどうかの確認 (MIMEタイプが空にされる場合へのフォールバック対応)
-      const mime = file.mimetype || "";
-      const isImage = mime.indexOf('image/') === 0 || file.name.match(/\.(jpg|jpeg|png|gif)$/i);
-      const isPdf = mime === 'application/pdf' || file.name.match(/\.pdf$/i);
+        // 画像ファイルまたはPDFかどうかの確認 (MIMEタイプが空にされる場合へのフォールバック対応)
+        const mime = file.mimetype || "";
+        const isImage = mime.indexOf('image/') === 0 || file.name.match(/\.(jpg|jpeg|png|gif)$/i);
+        const isPdf = mime === 'application/pdf' || file.name.match(/\.pdf$/i);
 
-      if (!isImage && !isPdf) {
-        return ContentService.createTextOutput("OK");
+        if (!isImage && !isPdf) {
+          continue; // 対象外のファイルはスキップして次へ
+        }
+
+        // 3. Driveへの保存処理
+        const driveFile = saveFileToDrive(file, SLACK_BOT_TOKEN);
+
+        // 4. OCR処理による文字抽出
+        const ocrText = extractTextWithOCR(driveFile.getId());
+
+        // 設定シートの準備と読み込み (sheet_handler.js側で定義した関数を利用)
+        const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+        const settingsMap = ensureSettingsSheet(ss);
+
+        // 5. 名目推論や金額などの抽出
+        const extractedData = parseOCRText(ocrText, settingsMap);
+
+        // 6. スプレッドシートへの記録 (内部で行番号と重複フラグを取得するため少し改修が必要だが、現状はそのまま記録し直後に最新情報を取る)
+        const recordResult = recordToSpreadsheet(extractedData, driveFile.getUrl(), event);
+
+        // 7. Slackへの対話型ボタン付き通知（Approve / Reject）
+        sendSlackInteractiveMessage(event.channel, extractedData, recordResult, settingsMap);
       }
-
-      // 3. Driveへの保存処理
-      const driveFile = saveFileToDrive(file, SLACK_BOT_TOKEN);
-
-      // 4. OCR処理による文字抽出
-      const ocrText = extractTextWithOCR(driveFile.getId());
-
-      // 設定シートの準備と読み込み (sheet_handler.js側で定義した関数を利用)
-      const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
-      const settingsMap = ensureSettingsSheet(ss);
-
-      // 5. 名目推論や金額などの抽出
-      const extractedData = parseOCRText(ocrText, settingsMap);
-
-      // 6. スプレッドシートへの記録 (内部で行番号と重複フラグを取得するため少し改修が必要だが、現状はそのまま記録し直後に最新情報を取る)
-      const recordResult = recordToSpreadsheet(extractedData, driveFile.getUrl(), event);
-
-      // 7. Slackへの対話型ボタン付き通知（Approve / Reject）
-      sendSlackInteractiveMessage(event.channel, extractedData, recordResult, settingsMap);
-
     } catch (error) {
-      console.error("Error processing message: " + error.toString() + "\nStack: " + error.stack);
 
       // 原因究明のため、スプレッドシート側に強制的にエラーログを書き出す
       try {
