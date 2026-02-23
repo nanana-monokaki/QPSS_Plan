@@ -63,6 +63,23 @@ function doPost(e) {
       return ContentService.createTextOutput("OK");
     }
 
+    // --- Slackの自動リトライ（3秒ルール）対策 ---
+    // SlackからのイベントIDを取得 (postData.event_id に存在)
+    const eventId = postData.event_id;
+    if (eventId) {
+      const cache = CacheService.getScriptCache();
+      const isProcessed = cache.get(eventId);
+      if (isProcessed) {
+        // すでに処理済み（あるいは処理中）のイベントなので無視
+        console.log(`Duplicate event ignored: ${eventId}`);
+        return ContentService.createTextOutput("OK");
+      }
+      // キャッシュに保存（6分間保持 = 360秒）
+      // ※Slackのリトライは通常最大5回（最初から数えて約5分以内）行われるため
+      cache.put(eventId, 'processed', 360);
+    }
+    // ------------------------------------------
+
     try {
       // 最初のファイルを処理（複数ある場合は拡張可能）
       const file = event.files[0];
