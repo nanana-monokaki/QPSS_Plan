@@ -94,28 +94,48 @@ function doPost(e) {
           continue; // 対象外のファイルはスキップして次へ
         }
 
-        // 3. Driveへの保存処理
-        const driveFile = saveFileToDrive(file, SLACK_BOT_TOKEN);
+        try {
+          // 3. Driveへの保存処理
+          const driveFile = saveFileToDrive(file, SLACK_BOT_TOKEN);
 
-        // 4. OCR処理による文字抽出
-        const ocrText = extractTextWithOCR(driveFile.getId());
+          // 4. OCR処理による文字抽出
+          const ocrText = extractTextWithOCR(driveFile.getId());
 
-        // 設定シートの準備と読み込み (sheet_handler.js側で定義した関数を利用)
-        const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
-        const settingsMap = ensureSettingsSheet(ss);
+          // 設定シートの準備と読み込み (sheet_handler.js側で定義した関数を利用)
+          const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+          const settingsMap = ensureSettingsSheet(ss);
 
-        // 5. 名目推論や金額などの抽出
-        const extractedData = parseOCRText(ocrText, settingsMap);
+          // 5. 名目推論や金額などの抽出
+          const extractedData = parseOCRText(ocrText, settingsMap);
 
-        // 6. スプレッドシートへの記録 (内部で行番号と重複フラグを取得するため少し改修が必要だが、現状はそのまま記録し直後に最新情報を取る)
-        const recordResult = recordToSpreadsheet(extractedData, driveFile.getUrl(), event);
+          // 6. スプレッドシートへの記録
+          const recordResult = recordToSpreadsheet(extractedData, driveFile.getUrl(), event);
 
-        // 7. Slackへの対話型ボタン付き通知（Approve / Reject）
-        sendSlackInteractiveMessage(event.channel, extractedData, recordResult, settingsMap);
+          // 7. Slackへの対話型ボタン付き通知（Approve / Reject）
+          sendSlackInteractiveMessage(event.channel, extractedData, recordResult, settingsMap);
+        } catch (fileError) {
+          // 個別のファイル処理でのエラーは、ここだけでキャッチし、次のループへ進む
+          console.error(`Error processing file ${file.name}:`, fileError);
+          try {
+            const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+            let logSheet = ss.getSheetByName("System_ErrorLog");
+            if (!logSheet) {
+              logSheet = ss.insertSheet("System_ErrorLog");
+              logSheet.appendRow(["発生日時", "エラー内容", "スタックトレース", "イベント内容(JSON)"]);
+            }
+            logSheet.appendRow([
+              new Date(),
+              `[File: ${file.name}] ` + fileError.toString(),
+              fileError.stack,
+              JSON.stringify(event)
+            ]);
+          } catch (logError) {
+            console.error("Failed to write individual file error log", logError);
+          }
+        }
       }
-    } catch (error) {
-
-      // 原因究明のため、スプレッドシート側に強制的にエラーログを書き出す
+    } catch (globalError) {
+      // ループ外などの致命的なエラー
       try {
         const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
         let logSheet = ss.getSheetByName("System_ErrorLog");
@@ -125,16 +145,13 @@ function doPost(e) {
         }
         logSheet.appendRow([
           new Date(),
-          error.toString(),
-          error.stack,
+          globalError.toString(),
+          globalError.stack,
           JSON.stringify(event)
         ]);
       } catch (logError) {
-        // ログ書き込みすら失敗した場合（SPREADSHEET_IDのミス等）
-        console.error("Failed to write error log to spreadsheet", logError);
+        console.error("Failed to write global error log to spreadsheet", logError);
       }
-
-      return ContentService.createTextOutput("OK"); // 返却値自体はOKを返し、Slackからのリトライ地獄を防ぐ
     }
   }
 

@@ -28,8 +28,10 @@ function saveFileToDrive(fileEventAuth, slackToken) {
     const date = ('0' + today.getDate()).slice(-2);
     const hours = ('0' + today.getHours()).slice(-2);
     const minutes = ('0' + today.getMinutes()).slice(-2);
+    const seconds = ('0' + today.getSeconds()).slice(-2);
+    const randomStr = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
 
-    const formattedDate = `${year}${month}${date}_${hours}${minutes}`;
+    const formattedDate = `${year}${month}${date}_${hours}${minutes}${seconds}_${randomStr}`;
     const extension = getFileExtension(fileEventAuth.mimetype, fileEventAuth.name);
     const newFileName = `receipt_${formattedDate}.${extension}`;
 
