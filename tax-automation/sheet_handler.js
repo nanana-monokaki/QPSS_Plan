@@ -62,6 +62,9 @@ function recordToSpreadsheet(extractedData, fileUrl, event) {
     const formulaCell = sheet.getRange(lastRow, 7); // G列
     formulaCell.setFormula(`=E${lastRow}*F${lastRow}`);
 
+    // 月間・年間・カテゴリ別サマリーシートの作成/更新
+    ensureSummarySheet(ss, yearStr, settings);
+
     return {
         sheetName: yearStr,
         rowNumber: lastRow,
@@ -108,6 +111,87 @@ function ensureSettingsSheet(ss) {
         }
     }
     return settingsMap;
+}
+
+/**
+ * 「サマリー」シートを確認し、存在しなければ作成する。
+ * 対象の年（yearStr）に関する「全体合計」および「カテゴリ別合計」の行を追加・更新する。
+ */
+function ensureSummarySheet(ss, yearStr, settingsMap) {
+    let sheet = ss.getSheetByName("サマリー");
+    if (!sheet) {
+        sheet = ss.insertSheet("サマリー", 0); // 先頭に作成
+        const headers = ["年", "種別", "年間合計", "1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"];
+        sheet.appendRow(headers);
+        sheet.setFrozenRows(1);
+        sheet.setFrozenColumns(2);
+
+        // ヘッダー行の書式設定
+        sheet.getRange(1, 1, 1, 15).setFontWeight("bold").setBackground("#e0e0e0");
+    }
+
+    // すでに今年度のサマリー行が存在するかチェック
+    const data = sheet.getDataRange().getValues();
+    let yearExists = false;
+    for (let i = 1; i < data.length; i++) {
+        // A列が対象の年（文字列表記や数値表記）の行があれば、もう作成済みとみなす
+        if (data[i][0].toString() === yearStr) {
+            yearExists = true;
+            break;
+        }
+    }
+
+    // 指定した年用のサマリー行がなければ追加
+    if (!yearExists) {
+        const rowsToAppend = [];
+
+        // 1. 全体経費
+        const expenseRow = [yearStr, "【全体】経費"];
+        expenseRow.push(`=SUMIF('${yearStr}'!H:H, "経費", '${yearStr}'!G:G)`); // 年間合計
+        for (let m = 1; m <= 12; m++) {
+            const startD = `${yearStr}/${('0' + m).slice(-2)}/01`;
+            const endD = `${yearStr}/${('0' + m).slice(-2)}/31`;
+            expenseRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}")`);
+        }
+        rowsToAppend.push(expenseRow);
+
+        // 2. 全体経費外
+        const nonExpenseRow = [yearStr, "【全体】経費外（対象外等）"];
+        nonExpenseRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "<>経費", '${yearStr}'!H:H, "<>")`); // 空白以外の経費以外
+        for (let m = 1; m <= 12; m++) {
+            const startD = `${yearStr}/${('0' + m).slice(-2)}/01`;
+            const endD = `${yearStr}/${('0' + m).slice(-2)}/31`;
+            nonExpenseRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "<>経費", '${yearStr}'!H:H, "<>", '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}")`);
+        }
+        rowsToAppend.push(nonExpenseRow);
+
+        // 3. カテゴリごとの経費
+        const categories = Object.keys(settingsMap || {});
+        for (const cat of categories) {
+            const catRow = [yearStr, `[名目] ${cat}`];
+            catRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!D:D, "${cat}")`);
+            for (let m = 1; m <= 12; m++) {
+                const startD = `${yearStr}/${('0' + m).slice(-2)}/01`;
+                const endD = `${yearStr}/${('0' + m).slice(-2)}/31`;
+                catRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!D:D, "${cat}", '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}")`);
+            }
+            rowsToAppend.push(catRow);
+        }
+
+        // 4. 空白行（次年度との区切り用）
+        rowsToAppend.push(new Array(15).fill(""));
+
+        // スプレッドシートへ書き込み
+        const startRow = sheet.getLastRow() + 1;
+        sheet.getRange(startRow, 1, rowsToAppend.length, 15).setValues(rowsToAppend);
+
+        // 金額列（C〜O）の表示形式を数字（カンマ区切り）に設定
+        sheet.getRange(startRow, 3, rowsToAppend.length, 13).setNumberFormat("#,##0");
+
+        // 行ごとの色分けなどの装飾（任意）
+        sheet.getRange(startRow, 1, 1, 15).setBackground("#fff2cc"); // 全体経費
+        sheet.getRange(startRow + 1, 1, 1, 15).setBackground("#f4cccc"); // 全体経費外
+    }
 }
 
 /**
