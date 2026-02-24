@@ -95,7 +95,7 @@ function doPost(e) {
         }
 
         try {
-          // 3. Driveへの保存処理
+          // 3. Driveへの一時保存処理
           const driveFile = saveFileToDrive(file, SLACK_BOT_TOKEN);
 
           // 4. OCR処理による文字抽出
@@ -108,7 +108,10 @@ function doPost(e) {
           // 5. 名目推論や金額などの抽出
           const extractedData = parseOCRText(ocrText, settingsMap);
 
-          // 6. スプレッドシートへの記録
+          // 6. 抽出した日付（年）に基づいて正しいフォルダへ移動し、リネーム
+          moveFileToYearFolder(driveFile, extractedData.date, file);
+
+          // 7. スプレッドシートへの記録
           const recordResult = recordToSpreadsheet(extractedData, driveFile.getUrl(), event);
 
           // 7. Slackへの対話型ボタン付き通知（Approve / Reject）

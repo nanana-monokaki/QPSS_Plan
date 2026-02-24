@@ -1,15 +1,13 @@
 /**
  * 定数定義 - Slackから画像をダウンロードするための準備や、ルートフォルダなどを設定
  */
-const DRIVE_ROOT_FOLDER_ID = '1pD7JPAz-Tm-N0s6KibyaCwnRQ4TXaG-J';
-const DRIVE_YEARLY_FOLDER_PREFIX = '年度_確定申告レシート';
+const DRIVE_ROOT_FOLDER_ID = '1S-kfpYK6oWyvh2qzLmO2oJlIfqbW1c61'; // 「確定申告レシート」フォルダ
 
 /**
- * 送信された画像ファイルをDriveに保存する
+ * 送信された画像ファイルをDriveに一時保存する
  * 
  * 1. Slackから画像を取得
- * 2. 所定のフォルダ構成（確定申告/2026年度_確定申告レシート/2026-02等）を作成/取得
- * 3. ファイルをリネーム（receipt_YYYYMMDD_HHmm.jpg等）して保存
+ * 2. 所定の親フォルダ（「確定申告レシート」）に一時的な名前で保存
  */
 function saveFileToDrive(fileEventAuth, slackToken) {
     // 1. ファイルのダウンロード
@@ -21,59 +19,68 @@ function saveFileToDrive(fileEventAuth, slackToken) {
     const response = UrlFetchApp.fetch(fileUrl, downloadOptions);
     const blob = response.getBlob();
 
-    // 名前の生成
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = ('0' + (today.getMonth() + 1)).slice(-2);
-    const date = ('0' + today.getDate()).slice(-2);
-    const hours = ('0' + today.getHours()).slice(-2);
-    const minutes = ('0' + today.getMinutes()).slice(-2);
-    const seconds = ('0' + today.getSeconds()).slice(-2);
-    const randomStr = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
-
-    const formattedDate = `${year}${month}${date}_${hours}${minutes}${seconds}_${randomStr}`;
+    // 一時的な名前の生成
     const extension = getFileExtension(fileEventAuth.mimetype, fileEventAuth.name);
-    const newFileName = `receipt_${formattedDate}.${extension}`;
+    const tempFileName = `temp_${new Date().getTime()}.${extension}`;
 
-    blob.setName(newFileName);
+    blob.setName(tempFileName);
 
-    // 2. フォルダの取得・作成
-    const folder = getTargetFolder(year, month);
+    // 2. 親フォルダ「11_確定申告」の取得
+    const rootFolder = DriveApp.getFolderById(DRIVE_ROOT_FOLDER_ID);
 
-    // 3. ファイルの保存
-    const driveFile = folder.createFile(blob);
+    // 3. ファイルの一時保存
+    const driveFile = rootFolder.createFile(blob);
 
     return driveFile;
 }
 
 /**
- * フォルダ構成の取得／作成
+ * 抽出された日付情報をもとに、ファイルを正しい「年-月」フォルダに移動しリネームする
  */
-function getTargetFolder(year, month) {
-    // 1. 親フォルダ「11_確定申告」の取得
+function moveFileToYearFolder(driveFile, receiptDate, fileEventAuth) {
+    // receiptDate is like "2026/02/10"
+    const today = new Date();
+    let year = today.getFullYear().toString();
+    // '02'のように0埋めされているものを数値として扱い再文字列化することで「2」にする
+    let month = (today.getMonth() + 1).toString();
+
+    if (receiptDate) {
+        const parts = receiptDate.split('/');
+        if (parts.length >= 2 && parts[0].length === 4) {
+            year = parts[0];
+            // '02'のような文字列を数値化して再文字列化（例: 2）
+            month = parseInt(parts[1], 10).toString();
+        }
+    }
+
     const rootFolder = DriveApp.getFolderById(DRIVE_ROOT_FOLDER_ID);
 
-    // 2. 年度別サブフォルダ「YYYY年度_確定申告レシート」の取得
-    const yearlyFolderName = `${year}${DRIVE_YEARLY_FOLDER_PREFIX}`;
-    let yearlyFolder;
-    const yearlyIter = rootFolder.getFoldersByName(yearlyFolderName);
-    if (yearlyIter.hasNext()) {
-        yearlyFolder = yearlyIter.next();
+    // 「2026-2」のような年-月フォルダの取得または作成
+    const targetFolderName = `${year}-${month}`;
+    let targetFolder;
+    const folderIter = rootFolder.getFoldersByName(targetFolderName);
+    if (folderIter.hasNext()) {
+        targetFolder = folderIter.next();
     } else {
-        yearlyFolder = rootFolder.createFolder(yearlyFolderName);
+        targetFolder = rootFolder.createFolder(targetFolderName);
     }
 
-    // 3. 月別フォルダ「YYYY-MM」の取得
-    const monthFolderName = `${year}-${month}`;
-    let monthFolder;
-    const monthIter = yearlyFolder.getFoldersByName(monthFolderName);
-    if (monthIter.hasNext()) {
-        monthFolder = monthIter.next();
-    } else {
-        monthFolder = yearlyFolder.createFolder(monthFolderName);
+    // ファイルの名前を正式なものに変更
+    const extension = getFileExtension(fileEventAuth.mimetype, fileEventAuth.name);
+
+    // date部分からYYYYMMDDを作成 (例 "2026/02/10" -> "20260210")
+    let formattedDate = year;
+    if (receiptDate && receiptDate.includes('/')) {
+        formattedDate = receiptDate.replace(/\//g, '');
     }
 
-    return monthFolder;
+    const randomStr = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    const newFileName = `receipt_${formattedDate}_${randomStr}.${extension}`;
+
+    driveFile.setName(newFileName);
+
+    // ファイルを指定の年-月フォルダに移動
+    driveFile.moveTo(targetFolder);
 }
 
 /**
