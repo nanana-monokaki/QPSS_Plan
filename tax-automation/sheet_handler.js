@@ -62,12 +62,22 @@ function recordToSpreadsheet(extractedData, fileUrl, event) {
     const formulaCell = sheet.getRange(lastRow, 7); // G列
     formulaCell.setFormula(`=E${lastRow}*F${lastRow}`);
 
+    // B列（日付）を昇順にソートする（月別に見やすくするため）
+    if (lastRow > 1) {
+        sheet.getRange(2, 1, lastRow - 1, sheet.getLastColumn()).sort({ column: 2, ascending: true });
+    }
+
+    // フィルタが設定されていなければ設定する
+    if (!sheet.getFilter()) {
+        sheet.getDataRange().createFilter();
+    }
+
     // 月間・年間・カテゴリ別サマリーシートの作成/更新
     ensureSummarySheet(ss, yearStr, settings);
 
     return {
         sheetName: yearStr,
-        rowNumber: lastRow,
+        fileUrl: fileUrl,
         isDuplicate: isDuplicate
     };
 }

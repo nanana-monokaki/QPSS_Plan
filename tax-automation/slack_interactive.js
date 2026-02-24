@@ -9,9 +9,10 @@ function sendSlackInteractiveMessage(channelId, extractedData, recordResult, set
     const finalAmount = Math.floor(extractedData.totalAmount * ratio);
 
     // コールバックに渡すための識別情報（スプレッドシートのどこを更新すべきか）
+    // 数式やソート等で行が変動するため、証憑URLを使って行を特定する
     const callbackContext = {
         sheetName: recordResult.sheetName,
-        rowNumber: recordResult.rowNumber
+        fileUrl: recordResult.fileUrl || extractedData.fileUrl || ""
     };
 
     let duplicateWarningText = "";
@@ -129,7 +130,33 @@ function handleSlackInteractivePayload(payload) {
         const sheet = ss.getSheetByName(valueData.sheetName);
 
         if (sheet) {
-            const flagRange = sheet.getRange(valueData.rowNumber, 8); // H列（経費フラグ）
+            // URLを使用して対象行を検索する (ソート等で行番号が変わる可能性があるため)
+            const lastRow = sheet.getLastRow();
+            let targetRow = -1;
+
+            if (lastRow >= 2) {
+                const urlData = sheet.getRange(2, 9, lastRow - 1, 1).getValues(); // I列(9列目)が証憑URL
+                for (let i = 0; i < urlData.length; i++) {
+                    if (urlData[i][0] === valueData.fileUrl) {
+                        targetRow = i + 2; // 1行目がヘッダー、iが0始まりのため+2
+                        break;
+                    }
+                }
+            }
+
+            if (targetRow === -1) {
+                UrlFetchApp.fetch(responseUrl, {
+                    method: "post",
+                    contentType: "application/json",
+                    payload: JSON.stringify({
+                        replace_original: false,
+                        text: ":warning: 対象となるスプレッドシートの行が見つからなかったため、更新に失敗しました（URL不一致または削除済み）。"
+                    })
+                });
+                return ContentService.createTextOutput("OK");
+            }
+
+            const flagRange = sheet.getRange(targetRow, 8); // H列（経費フラグ）
 
             let newMessageText = "";
 
