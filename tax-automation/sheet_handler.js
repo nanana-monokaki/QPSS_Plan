@@ -133,10 +133,12 @@ function ensureSummarySheet(ss, yearStr, settingsMap) {
     // すでに今年度のサマリー行が存在するかチェック
     const data = sheet.getDataRange().getValues();
     let yearExists = false;
+    let yearStartIdx = -1;
     for (let i = 1; i < data.length; i++) {
         // A列が対象の年（文字列表記や数値表記）の行があれば、もう作成済みとみなす
         if (data[i][0].toString() === yearStr) {
             yearExists = true;
+            yearStartIdx = i;
             break;
         }
     }
@@ -191,6 +193,59 @@ function ensureSummarySheet(ss, yearStr, settingsMap) {
         // 行ごとの色分けなどの装飾（任意）
         sheet.getRange(startRow, 1, 1, 15).setBackground("#fff2cc"); // 全体経費
         sheet.getRange(startRow + 1, 1, 1, 15).setBackground("#f4cccc"); // 全体経費外
+    } else {
+        // すでに年ブロックが存在する場合、不足している「名目（カテゴリ）」があれば追記する
+        const existingCategories = new Set();
+        let endIdx = yearStartIdx;
+
+        for (let i = yearStartIdx; i < data.length; i++) {
+            const rowYearStr = data[i][0].toString();
+            // 対象年、または区切りの空白行である間は探索
+            if (rowYearStr === yearStr || rowYearStr === "") {
+                endIdx = i;
+                const typeStr = data[i][1] ? data[i][1].toString() : "";
+                if (typeStr.startsWith("[名目] ")) {
+                    existingCategories.add(typeStr.replace("[名目] ", ""));
+                }
+            } else {
+                break; // 次の年のブロックに入った
+            }
+        }
+
+        const categories = Object.keys(settingsMap || {});
+        // 設定シートにあるが、サマリーシートにないカテゴリを抽出
+        const missingCategories = categories.filter(cat => !existingCategories.has(cat));
+
+        if (missingCategories.length > 0) {
+            const rowsToInsert = [];
+            for (const cat of missingCategories) {
+                const catRow = [yearStr, `[名目] ${cat}`];
+                catRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!D:D, "${cat}")`);
+                for (let m = 1; m <= 12; m++) {
+                    const startD = `${yearStr}/${('0' + m).slice(-2)}/01`;
+                    const endD = `${yearStr}/${('0' + m).slice(-2)}/31`;
+                    catRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!D:D, "${cat}", '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}")`);
+                }
+                rowsToInsert.push(catRow);
+            }
+
+            // endIdx は現在のブロックの最終行 (0-indexed)
+            let insertAtRow = endIdx + 1;
+            if (data[endIdx] && data[endIdx][0].toString() !== "") {
+                insertAtRow = endIdx + 2;
+            }
+
+            // 行の挿入とデータ書き込み
+            if (insertAtRow > sheet.getLastRow()) {
+                const startR = sheet.getLastRow() + 1;
+                sheet.getRange(startR, 1, rowsToInsert.length, 15).setValues(rowsToInsert);
+                sheet.getRange(startR, 3, rowsToInsert.length, 13).setNumberFormat("#,##0");
+            } else {
+                sheet.insertRowsBefore(insertAtRow, rowsToInsert.length);
+                sheet.getRange(insertAtRow, 1, rowsToInsert.length, 15).setValues(rowsToInsert);
+                sheet.getRange(insertAtRow, 3, rowsToInsert.length, 13).setNumberFormat("#,##0");
+            }
+        }
     }
 }
 
@@ -262,7 +317,7 @@ function checkDuplicate(sheet, extractedData) {
 }
 
 /**
- * カスタムメニューからサマリーシートを作成・更新するための関数
+ * サマリーシートを作成・更新するための関数（GASエディタからの手動実行用、またはイベント発火時）
  */
 function createSummarySheetManually() {
     const ss = SpreadsheetApp.openById(SPREADSHEET_ID); // main.jsで定義されているものを利用
@@ -274,25 +329,5 @@ function createSummarySheetManually() {
     // サマリーシートを作成または更新
     ensureSummarySheet(ss, currentYearStr, settings);
     console.log(`${currentYearStr}年のサマリーシート作成プロセスを実行しました。`);
-
-    try {
-        SpreadsheetApp.getUi().alert(`${currentYearStr}年のサマリーシートを作成/更新しました。`);
-    } catch (e) {
-        // トリガー実行時などUIが無い場合はスキップ
-    }
-}
-
-/**
- * スプレッドシートを開いたときにメニューを追加
- */
-function onOpen() {
-    try {
-        const ui = SpreadsheetApp.getUi();
-        ui.createMenu('税務処理ツール')
-            .addItem('今年のサマリーシートを作成/更新', 'createSummarySheetManually')
-            .addToUi();
-    } catch (e) {
-        // UIが取得できない場合は無視
-    }
 }
 
