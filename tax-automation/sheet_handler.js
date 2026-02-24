@@ -261,3 +261,38 @@ function checkDuplicate(sheet, extractedData) {
     return false;
 }
 
+/**
+ * カスタムメニューからサマリーシートを作成・更新するための関数
+ */
+function createSummarySheetManually() {
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID); // main.jsで定義されているものを利用
+    const settings = ensureSettingsSheet(ss);
+
+    // 現在の年を取得して、そのシートが存在するか確認する
+    const currentYearStr = new Date().getFullYear().toString();
+
+    // サマリーシートを作成または更新
+    ensureSummarySheet(ss, currentYearStr, settings);
+    console.log(`${currentYearStr}年のサマリーシート作成プロセスを実行しました。`);
+
+    try {
+        SpreadsheetApp.getUi().alert(`${currentYearStr}年のサマリーシートを作成/更新しました。`);
+    } catch (e) {
+        // トリガー実行時などUIが無い場合はスキップ
+    }
+}
+
+/**
+ * スプレッドシートを開いたときにメニューを追加
+ */
+function onOpen() {
+    try {
+        const ui = SpreadsheetApp.getUi();
+        ui.createMenu('税務処理ツール')
+            .addItem('今年のサマリーシートを作成/更新', 'createSummarySheetManually')
+            .addToUi();
+    } catch (e) {
+        // UIが取得できない場合は無視
+    }
+}
+
