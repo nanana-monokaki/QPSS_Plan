@@ -5,7 +5,6 @@ const SLACK_BOT_TOKEN = PROPERTIES.getProperty('SLACK_BOT_TOKEN');
 const SPREADSHEET_ID = PROPERTIES.getProperty('SPREADSHEET_ID');
 const TARGET_CHANNEL_ID = PROPERTIES.getProperty('TARGET_CHANNEL_ID'); // 対象のチャンネルID（例: C01234567）
 const GEMINI_API_KEY = PROPERTIES.getProperty('GEMINI_API_KEY'); // 追加: Gemini APIキー
-
 /**
  * SlackからのEvents API / Webhooks 受信エンドポイント
  */

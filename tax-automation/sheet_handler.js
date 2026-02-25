@@ -48,7 +48,7 @@ function recordToSpreadsheet(extractedData, fileUrl, event) {
         extractedData.totalAmount,// E列: 総額
         presetRatio,              // F列: 按分率
         `=Erow*Frow`,             // G列: 経費計上額（実際には書き込み行番号に置換される）
-        "経費",                   // H列: 経費フラグ (ON -> 経費)
+        "-",                      // H列: 経費フラグ (デフォルトは「-」)
         fileUrl,                  // I列: 証憑URL
         `OCR生データ: ${extractedData.rawText.substring(0, 50)}...`, // J列: 備考/修正メモ
         isDuplicate ? "重複の可能性あり" : "" // K列: 重複警告

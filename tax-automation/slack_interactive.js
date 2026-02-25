@@ -161,7 +161,7 @@ function handleSlackInteractivePayload(payload) {
             let newMessageText = "";
 
             if (valueData.action === "approve") {
-                // Approveの場合、すでにデフォルトで「経費」なので特に変えなくてもよいが、念のためチェック
+                // Approveの場合、デフォルトの「-」から「経費」に変更する
                 flagRange.setValue("経費");
                 newMessageText = `:white_check_mark: *@[${user}]* によって「経費として計上 (Approve)」されました。`;
             } else if (valueData.action === "reject") {
