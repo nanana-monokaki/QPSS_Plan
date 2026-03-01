@@ -169,11 +169,11 @@ function ensureSummarySheet(ss, yearStr, settingsMap) {
 
         // 2. 全体経費外
         const nonExpenseRow = [yearStr, "【全体】経費外（対象外等）"];
-        nonExpenseRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "<>経費", '${yearStr}'!H:H, "<>")`); // 空白以外の経費以外
+        nonExpenseRow.push(`=SUM('${yearStr}'!E:E) - SUMIF('${yearStr}'!H:H, "経費", '${yearStr}'!G:G)`); // 総額(E) - 経費計上額(G)
         for (let m = 1; m <= 12; m++) {
             const startD = `${yearStr}/${('0' + m).slice(-2)}/01`;
             const endD = `${yearStr}/${('0' + m).slice(-2)}/31`;
-            nonExpenseRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "<>経費", '${yearStr}'!H:H, "<>", '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}")`);
+            nonExpenseRow.push(`=SUMIFS('${yearStr}'!E:E, '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}") - SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}")`);
         }
         rowsToAppend.push(nonExpenseRow);
 
