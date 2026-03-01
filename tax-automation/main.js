@@ -6,6 +6,32 @@ const SPREADSHEET_ID = PROPERTIES.getProperty('SPREADSHEET_ID');
 const TARGET_CHANNEL_ID = PROPERTIES.getProperty('TARGET_CHANNEL_ID'); // 対象のチャンネルID（例: C01234567）
 const GEMINI_API_KEY = PROPERTIES.getProperty('GEMINI_API_KEY'); // 追加: Gemini APIキー
 /**
+ * デバッグ用: RequestDumpの最新20件を取得する
+ */
+function doGet(e) {
+  try {
+    const action = e.parameter.action;
+    if (action === "dump_logs") {
+      const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+      const sheet = ss.getSheetByName("System_RequestDump");
+      if (!sheet) return ContentService.createTextOutput("No dump sheet");
+
+      const lastRow = sheet.getLastRow();
+      if (lastRow < 2) return ContentService.createTextOutput("No data");
+
+      const startRow = Math.max(2, lastRow - 19);
+      const numRows = lastRow - startRow + 1;
+      const data = sheet.getRange(startRow, 1, numRows, 2).getValues();
+
+      return ContentService.createTextOutput(JSON.stringify(data, null, 2));
+    }
+    return ContentService.createTextOutput("Invalid action");
+  } catch (err) {
+    return ContentService.createTextOutput("Error: " + err.toString());
+  }
+}
+
+/**
  * SlackからのEvents API / Webhooks 受信エンドポイント
  */
 function doPost(e) {
@@ -62,22 +88,33 @@ function doPost(e) {
       return ContentService.createTextOutput("OK");
     }
 
-    // --- Slackの自動リトライ（3秒ルール）対策 ---
+    // --- Slackの自動リトライ（3秒ルール）対策（確実なPropertiesServiceを利用） ---
     // SlackからのイベントIDを取得 (postData.event_id に存在)
     const eventId = postData.event_id;
     if (eventId) {
-      const cache = CacheService.getScriptCache();
-      const isProcessed = cache.get(eventId);
-      if (isProcessed) {
-        // すでに処理済み（あるいは処理中）のイベントなので無視
-        console.log(`Duplicate event ignored: ${eventId}`);
+      const props = PropertiesService.getScriptProperties();
+      const PROCESSED_EVENTS_KEY = 'PROCESSED_EVENTS_QUEUE';
+      let queueStr = props.getProperty(PROCESSED_EVENTS_KEY);
+      let queue = queueStr ? JSON.parse(queueStr) : [];
+
+      if (queue.includes(eventId)) {
+        // すでに処理済み（あるいは処理中）のイベントなので完全に無視
+        console.log(`Duplicate event ignored via Properties: ${eventId}`);
         return ContentService.createTextOutput("OK");
       }
-      // キャッシュに保存（6分間保持 = 360秒）
-      // ※Slackのリトライは通常最大5回（最初から数えて約5分以内）行われるため
-      cache.put(eventId, 'processed', 360);
+
+      // キューに追加し、最新50件のみを保持する
+      queue.push(eventId);
+      if (queue.length > 50) {
+        queue.shift();
+      }
+      props.setProperty(PROCESSED_EVENTS_KEY, JSON.stringify(queue));
+
+      // CacheServiceも念の為併用 (アクセスが高速なため)
+      const cache = CacheService.getScriptCache();
+      cache.put(eventId, 'processed', 600); // 10分
     }
-    // ------------------------------------------
+    // --------------------------------------------------------------------------
 
     try {
       // 添付された全てのファイルをループして処理
