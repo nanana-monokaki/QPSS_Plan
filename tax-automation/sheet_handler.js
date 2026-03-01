@@ -40,6 +40,7 @@ function recordToSpreadsheet(extractedData, fileUrl, event) {
     }
 
     // データ配列の作成
+    const nextRow = sheet.getLastRow() + 1;
     const rowData = [
         source,                   // A列: 入力元
         extractedData.date,       // B列: 日付
@@ -47,7 +48,7 @@ function recordToSpreadsheet(extractedData, fileUrl, event) {
         extractedData.category,   // D列: 名目
         extractedData.totalAmount,// E列: 総額
         presetRatio,              // F列: 按分率
-        `=Erow*Frow`,             // G列: 経費計上額（実際には書き込み行番号に置換される）
+        `=E${nextRow}*F${nextRow}`, // G列: 経費計上額
         "-",                      // H列: 経費フラグ (デフォルトは「-」)
         fileUrl,                  // I列: 証憑URL
         `OCR生データ: ${extractedData.rawText.substring(0, 50)}...`, // J列: 備考/修正メモ
@@ -57,10 +58,7 @@ function recordToSpreadsheet(extractedData, fileUrl, event) {
     // シートの最終行の次の行に追記
     sheet.appendRow(rowData);
 
-    // G列の数式（=E行番号*F行番号）を実際の行番号に置換する補正処理
     const lastRow = sheet.getLastRow();
-    const formulaCell = sheet.getRange(lastRow, 7); // G列
-    formulaCell.setFormula(`=E${lastRow}*F${lastRow}`);
 
     // B列（日付）を昇順にソートする（月別に見やすくするため）
     if (lastRow > 1) {
@@ -161,8 +159,9 @@ function ensureSummarySheet(ss, yearStr, settingsMap) {
         const expenseRow = [yearStr, "【全体】経費"];
         expenseRow.push(`=SUMIF('${yearStr}'!H:H, "経費", '${yearStr}'!G:G)`); // 年間合計
         for (let m = 1; m <= 12; m++) {
+            const lastDay = new Date(parseInt(yearStr), m, 0).getDate();
             const startD = `${yearStr}/${('0' + m).slice(-2)}/01`;
-            const endD = `${yearStr}/${('0' + m).slice(-2)}/31`;
+            const endD = `${yearStr}/${('0' + m).slice(-2)}/${('0' + lastDay).slice(-2)}`;
             expenseRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}")`);
         }
         rowsToAppend.push(expenseRow);
@@ -171,8 +170,9 @@ function ensureSummarySheet(ss, yearStr, settingsMap) {
         const nonExpenseRow = [yearStr, "【全体】経費外（対象外等）"];
         nonExpenseRow.push(`=SUM('${yearStr}'!E:E) - SUMIF('${yearStr}'!H:H, "経費", '${yearStr}'!G:G)`); // 総額(E) - 経費計上額(G)
         for (let m = 1; m <= 12; m++) {
+            const lastDay = new Date(parseInt(yearStr), m, 0).getDate();
             const startD = `${yearStr}/${('0' + m).slice(-2)}/01`;
-            const endD = `${yearStr}/${('0' + m).slice(-2)}/31`;
+            const endD = `${yearStr}/${('0' + m).slice(-2)}/${('0' + lastDay).slice(-2)}`;
             nonExpenseRow.push(`=SUMIFS('${yearStr}'!E:E, '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}") - SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}")`);
         }
         rowsToAppend.push(nonExpenseRow);
@@ -183,8 +183,9 @@ function ensureSummarySheet(ss, yearStr, settingsMap) {
             const catRow = [yearStr, `[名目] ${cat}`];
             catRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!D:D, "${cat}")`);
             for (let m = 1; m <= 12; m++) {
+                const lastDay = new Date(parseInt(yearStr), m, 0).getDate();
                 const startD = `${yearStr}/${('0' + m).slice(-2)}/01`;
-                const endD = `${yearStr}/${('0' + m).slice(-2)}/31`;
+                const endD = `${yearStr}/${('0' + m).slice(-2)}/${('0' + lastDay).slice(-2)}`;
                 catRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!D:D, "${cat}", '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}")`);
             }
             rowsToAppend.push(catRow);
@@ -232,8 +233,9 @@ function ensureSummarySheet(ss, yearStr, settingsMap) {
                 const catRow = [yearStr, `[名目] ${cat}`];
                 catRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!D:D, "${cat}")`);
                 for (let m = 1; m <= 12; m++) {
+                    const lastDay = new Date(parseInt(yearStr), m, 0).getDate();
                     const startD = `${yearStr}/${('0' + m).slice(-2)}/01`;
-                    const endD = `${yearStr}/${('0' + m).slice(-2)}/31`;
+                    const endD = `${yearStr}/${('0' + m).slice(-2)}/${('0' + lastDay).slice(-2)}`;
                     catRow.push(`=SUMIFS('${yearStr}'!G:G, '${yearStr}'!H:H, "経費", '${yearStr}'!D:D, "${cat}", '${yearStr}'!B:B, ">=${startD}", '${yearStr}'!B:B, "<=${endD}")`);
                 }
                 rowsToInsert.push(catRow);
