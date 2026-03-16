@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name=""/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+
+      <!-- ダークネイビー背景帯 上部 -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="BG Top"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="0" y="0"/>
+            <a:ext cx="9144000" cy="914400"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="1E2761"/>
+          </a:solidFill>
+          <a:ln>
+            <a:noFill/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p><a:endParaRPr lang="ja-JP"/></a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- 上部帯：「第1弾　決定！」ラベル -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="Label Top"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="91440"/>
+            <a:ext cx="8229600" cy="731520"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="0" indent="0">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" sz="2400" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>聞き耳アワーシリーズ　</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" sz="2800" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="F9E795"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>第1弾　決定！</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- 赤アクセントライン -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="4" name="AccentLine"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="960120"/>
+            <a:ext cx="1828800" cy="0"/>
+          </a:xfrm>
+          <a:prstGeom prst="line">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln w="38100">
+            <a:solidFill>
+              <a:srgbClr val="C5283D"/>
+            </a:solidFill>
+            <a:prstDash val="solid"/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p><a:endParaRPr lang="ja-JP" altLang="en-US"/></a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- 作品タイトル大見出し「エンドレス・ラブ」 -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="5" name="WorkTitle"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="1005840"/>
+            <a:ext cx="8229600" cy="1143000"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="0" indent="0" algn="l">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" sz="5600" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="1E2761"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>『エンドレス・ラブ』</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- 原作・出版・舞台情報 -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="6" name="SubInfo"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="2148840"/>
+          <a:ext cx="8229600" cy="457200"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="t"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="0" indent="0">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" sz="1600" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="C5283D"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>原作：姫野カオルコ（徳間書店刊）　／　出演：ラジカル鈴木　／　舞台・公演時期：決定済み</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- 区切り線 -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="7" name="DivLine"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="2668920"/>
+            <a:ext cx="8229600" cy="0"/>
+          </a:xfrm>
+          <a:prstGeom prst="line">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln w="19050">
+            <a:solidFill>
+              <a:srgbClr val="CCCCCC"/>
+            </a:solidFill>
+            <a:prstDash val="solid"/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p><a:endParaRPr lang="ja-JP" altLang="en-US"/></a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- 「あらすじ」ラベル -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="8" name="SynopsisLabel"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="2731200"/>
+            <a:ext cx="914400" cy="342900"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="1E2761"/>
+          </a:solidFill>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" sz="1400" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="FFFFFF"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>あらすじ</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+      <!-- あらすじ本文 -->
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="9" name="SynopsisText"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="3131040"/>
+            <a:ext cx="8229600" cy="1966320"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln><a:noFill/></a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0" anchor="t"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPts val="2800"/>
+              </a:lnSpc>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" sz="1400" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>舞台は昭和のある夜のアパートの一室。主人公の男は、壁に開いた7mmの小さな穴から隣室を覗くことを日課としている。その夜、隣室の女・菜穂子が見知らぬ男と性的な行為に及ぶ場面を目撃した彼は、手元の文学テキストを「朗読」しながら、嫌悪と興奮とが入り混じる複雑な感情を独白する。「清廉」であることへの強烈な矜持と、情欲の狭間で揺れ動く男の心理が、文学的な言葉と赤裸々な告白によって浮かび上がる。姫野カオルコの問題作を、ラジオ的演劇空間で真正面から立体化した一人芝居。</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>

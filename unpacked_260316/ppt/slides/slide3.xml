@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld>
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name="">
+          <a:extLst>
+            <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+              <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{BC6B7364-4476-7FD4-03BA-D46808229A22}"/>
+            </a:ext>
+          </a:extLst>
+        </p:cNvPr>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="Text 0">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{6098EE5B-FE6B-BED6-B73C-1748B4052A8C}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="182880"/>
+            <a:ext cx="8229600" cy="731520"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="b"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="0" indent="0">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" sz="3200" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="1E2761"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>１．</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" sz="3200" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="1E2761"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>シリーズコンセプト</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" sz="3200" dirty="0"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="Shape 1">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{BF4B4709-FFEB-6B62-CA1C-2A6A21BCBD0F}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="960120"/>
+            <a:ext cx="1828800" cy="0"/>
+          </a:xfrm>
+          <a:prstGeom prst="line">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln w="38100">
+            <a:solidFill>
+              <a:srgbClr val="C5283D"/>
+            </a:solidFill>
+            <a:prstDash val="solid"/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:endParaRPr lang="ja-JP" altLang="en-US"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="4" name="Text 2">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{9F18AE8A-BAD6-F82F-1E97-356ED19D1C68}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="1270590" y="1417320"/>
+            <a:ext cx="6602819" cy="731520"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="0" indent="0">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" sz="2800" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="C5283D"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>文学を「読む」から「劇場で聴く」へ。</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" sz="2800" dirty="0"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="5" name="Text 3">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{FBE7C8A8-D470-1DCE-549D-7ED7C170C12D}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="2103120"/>
+            <a:ext cx="8229600" cy="731520"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="E2E8F0"/>
+          </a:solidFill>
+          <a:ln/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:r>
+              <a:rPr b="1" dirty="0" err="1">
+                <a:solidFill>
+                  <a:schemeClr val="accent1">
+                    <a:lumMod val="75000"/>
+                  </a:schemeClr>
+                </a:solidFill>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>直木賞作家・姫野カオルコが</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" b="1" dirty="0">
+              <a:solidFill>
+                <a:schemeClr val="accent1">
+                  <a:lumMod val="75000"/>
+                </a:schemeClr>
+              </a:solidFill>
+              <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="ctr"/>
+            <a:r>
+              <a:rPr b="1" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="accent1">
+                    <a:lumMod val="75000"/>
+                  </a:schemeClr>
+                </a:solidFill>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>「</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr b="1" dirty="0" err="1">
+                <a:solidFill>
+                  <a:schemeClr val="accent1">
+                    <a:lumMod val="75000"/>
+                  </a:schemeClr>
+                </a:solidFill>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>耳で読む文学」を厳選チョイス＆完全プロデュース</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr b="1" dirty="0">
+                <a:solidFill>
+                  <a:schemeClr val="accent1">
+                    <a:lumMod val="75000"/>
+                  </a:schemeClr>
+                </a:solidFill>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>！</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="6" name="Text 4">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{5D4B46A1-67FB-14B6-E040-3BD651AADE42}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="3108960"/>
+            <a:ext cx="8229600" cy="1746575"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0" anchor="t"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPts val="2800"/>
+              </a:lnSpc>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>新しい文学体験型朗読劇シリーズです</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>。</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" altLang="ja-JP" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPts val="2800"/>
+              </a:lnSpc>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>選び抜かれた珠玉の物語を</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>、</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>劇場という空間で</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" altLang="ja-JP" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="333333"/>
+              </a:solidFill>
+              <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+              <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+              <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPts val="2800"/>
+              </a:lnSpc>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>声・音・映像とともにQPSSが立体化</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>。</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" altLang="ja-JP" dirty="0"/>
+          </a:p>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPts val="2800"/>
+              </a:lnSpc>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>ライブ体験を起点とし、ポッドキャスト・音声配信へと展開</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>。</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" altLang="ja-JP" dirty="0">
+              <a:solidFill>
+                <a:srgbClr val="333333"/>
+              </a:solidFill>
+              <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+              <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+              <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr>
+              <a:lnSpc>
+                <a:spcPts val="2800"/>
+              </a:lnSpc>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>「</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>耳から出会う文学」を日常へ届けます</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>。</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" altLang="ja-JP" dirty="0"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+    </p:spTree>
+    <p:extLst>
+      <p:ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
+        <p14:creationId xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" val="2736890004"/>
+      </p:ext>
+    </p:extLst>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>

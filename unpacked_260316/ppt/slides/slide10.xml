@@ -1,0 +1,1516 @@
+<?xml version="1.0" encoding="UTF-8"?><p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld name="Slide 10">
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name=""/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="Text 0"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="182880"/>
+            <a:ext cx="8229600" cy="731520"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="b"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="0" indent="0">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" sz="3200" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="1E2761"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>８</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" sz="3200" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="1E2761"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>．実施概要 ＆ 公演予定</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" sz="3200" dirty="0"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="Shape 1"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="960120"/>
+            <a:ext cx="1828800" cy="0"/>
+          </a:xfrm>
+          <a:prstGeom prst="line">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln w="38100">
+            <a:solidFill>
+              <a:srgbClr val="C5283D"/>
+            </a:solidFill>
+            <a:prstDash val="solid"/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:endParaRPr lang="ja-JP" altLang="en-US"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:graphicFrame>
+        <p:nvGraphicFramePr>
+          <p:cNvPr id="11" name="Table 0"/>
+          <p:cNvGraphicFramePr>
+            <a:graphicFrameLocks noGrp="1"/>
+          </p:cNvGraphicFramePr>
+          <p:nvPr>
+            <p:extLst>
+              <p:ext uri="{D42A27DB-BD31-4B8C-83A1-F6EECF244321}">
+                <p14:modId xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" val="892546"/>
+              </p:ext>
+            </p:extLst>
+          </p:nvPr>
+        </p:nvGraphicFramePr>
+        <p:xfrm>
+          <a:off x="457200" y="2046592"/>
+          <a:ext cx="8229600" cy="2133600"/>
+        </p:xfrm>
+        <a:graphic>
+          <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/table">
+            <a:tbl>
+              <a:tblPr/>
+              <a:tblGrid>
+                <a:gridCol w="2286000">
+                  <a:extLst>
+                    <a:ext uri="{9D8B030D-6E8A-4147-A177-3AD203B41FA5}">
+                      <a16:colId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" val="20000"/>
+                    </a:ext>
+                  </a:extLst>
+                </a:gridCol>
+                <a:gridCol w="5943600">
+                  <a:extLst>
+                    <a:ext uri="{9D8B030D-6E8A-4147-A177-3AD203B41FA5}">
+                      <a16:colId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" val="20001"/>
+                    </a:ext>
+                  </a:extLst>
+                </a:gridCol>
+              </a:tblGrid>
+              <a:tr h="0">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="ja-JP" altLang="en-US" sz="1400" b="1" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>上演</a:t>
+                      </a:r>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" b="1" dirty="0" err="1">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>期間</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="1E2761"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="000000"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>３日間を予定</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:extLst>
+                  <a:ext uri="{0D108BD9-81ED-4DB2-BD59-A6C34878D82A}">
+                    <a16:rowId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" val="10000"/>
+                  </a:ext>
+                </a:extLst>
+              </a:tr>
+              <a:tr h="0">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" b="1" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>上演時間</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="1E2761"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="000000"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>約90分（トークショー込み）</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:extLst>
+                  <a:ext uri="{0D108BD9-81ED-4DB2-BD59-A6C34878D82A}">
+                    <a16:rowId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" val="10001"/>
+                  </a:ext>
+                </a:extLst>
+              </a:tr>
+              <a:tr h="0">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="ja-JP" altLang="en-US" sz="1400" b="1" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>ステージ数</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="1E2761"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="000000"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>5-6回公演</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:extLst>
+                  <a:ext uri="{0D108BD9-81ED-4DB2-BD59-A6C34878D82A}">
+                    <a16:rowId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" val="10002"/>
+                  </a:ext>
+                </a:extLst>
+              </a:tr>
+              <a:tr h="0">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" b="1" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>キャスト数</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="1E2761"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="000000"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>2〜3名（2.5次元俳優の起用を想定）</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:extLst>
+                  <a:ext uri="{0D108BD9-81ED-4DB2-BD59-A6C34878D82A}">
+                    <a16:rowId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" val="10003"/>
+                  </a:ext>
+                </a:extLst>
+              </a:tr>
+              <a:tr h="0">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" b="1" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>会場</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="1E2761"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="000000"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>小規模劇場（50-100席想定）</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:extLst>
+                  <a:ext uri="{0D108BD9-81ED-4DB2-BD59-A6C34878D82A}">
+                    <a16:rowId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" val="10004"/>
+                  </a:ext>
+                </a:extLst>
+              </a:tr>
+              <a:tr h="0">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" b="1" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>チケット代金</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="1E2761"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="000000"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>5000円</a:t>
+                      </a:r>
+                      <a:r>
+                        <a:rPr lang="ja-JP" altLang="en-US" sz="1400" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="000000"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>前後</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:extLst>
+                  <a:ext uri="{0D108BD9-81ED-4DB2-BD59-A6C34878D82A}">
+                    <a16:rowId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" val="10005"/>
+                  </a:ext>
+                </a:extLst>
+              </a:tr>
+              <a:tr h="0">
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" b="1" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="FFFFFF"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>将来展望</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="1E2761"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:tc>
+                  <a:txBody>
+                    <a:bodyPr/>
+                    <a:lstStyle/>
+                    <a:p>
+                      <a:pPr marL="0" indent="0">
+                        <a:buNone/>
+                      </a:pPr>
+                      <a:r>
+                        <a:rPr lang="en-US" sz="1400" dirty="0">
+                          <a:solidFill>
+                            <a:srgbClr val="000000"/>
+                          </a:solidFill>
+                          <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                          <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                          <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+                        </a:rPr>
+                        <a:t>シリーズ化／定期開催（※詳細は調整可能）</a:t>
+                      </a:r>
+                      <a:endParaRPr lang="en-US" sz="1400" dirty="0">
+                        <a:latin typeface="Yu Mincho" charset="0"/>
+                        <a:ea typeface="Yu Mincho" charset="0"/>
+                        <a:cs typeface="Yu Mincho" charset="0"/>
+                      </a:endParaRPr>
+                    </a:p>
+                  </a:txBody>
+                  <a:tcPr anchor="ctr">
+                    <a:lnL w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnL>
+                    <a:lnR w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnR>
+                    <a:lnT w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnT>
+                    <a:lnB w="12700" cap="flat" cmpd="sng" algn="ctr">
+                      <a:solidFill>
+                        <a:srgbClr val="E2E8F0"/>
+                      </a:solidFill>
+                      <a:prstDash val="solid"/>
+                      <a:round/>
+                      <a:headEnd type="none" w="med" len="med"/>
+                      <a:tailEnd type="none" w="med" len="med"/>
+                    </a:lnB>
+                    <a:solidFill>
+                      <a:srgbClr val="FFFFFF"/>
+                    </a:solidFill>
+                  </a:tcPr>
+                </a:tc>
+                <a:extLst>
+                  <a:ext uri="{0D108BD9-81ED-4DB2-BD59-A6C34878D82A}">
+                    <a16:rowId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" val="10006"/>
+                  </a:ext>
+                </a:extLst>
+              </a:tr>
+            </a:tbl>
+          </a:graphicData>
+        </a:graphic>
+      </p:graphicFrame>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="5" name="Shape 2"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="457200" y="4259579"/>
+            <a:ext cx="8229600" cy="748179"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="F8FAFC"/>
+          </a:solidFill>
+          <a:ln w="25400">
+            <a:solidFill>
+              <a:srgbClr val="C5283D"/>
+            </a:solidFill>
+            <a:prstDash val="solid"/>
+          </a:ln>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr/>
+          <a:lstStyle/>
+          <a:p>
+            <a:endParaRPr lang="ja-JP" altLang="en-US"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="6" name="Text 3"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="265814" y="4305832"/>
+            <a:ext cx="8495413" cy="365760"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="0" indent="0" algn="ctr">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" sz="1600" b="1" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="C5283D"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>今後の公演予定</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" sz="1600" dirty="0"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="7" name="Text 4"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="914400" y="4625340"/>
+            <a:ext cx="7315200" cy="304800"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="0" indent="0" algn="ctr" rtl="0" eaLnBrk="1" latinLnBrk="0" hangingPunct="1">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-TW" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>【</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-TW" altLang="en-US" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>第２弾</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-TW" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t xml:space="preserve">】 </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-TW" altLang="en-US" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>「</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-TW" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>X</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-TW" altLang="en-US" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>博士」</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="ja-JP" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>/</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-TW" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>【</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-TW" altLang="en-US" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>第３弾</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="en-US" altLang="zh-TW" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t xml:space="preserve">】 </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-TW" altLang="en-US" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+                <a:effectLst/>
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>「探偵物語」</a:t>
+            </a:r>
+            <a:endParaRPr lang="zh-TW" altLang="en-US" dirty="0">
+              <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+            </a:endParaRPr>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="12" name="Rounded Rectangle 11"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="1371600" y="1068218"/>
+            <a:ext cx="6400800" cy="914400"/>
+          </a:xfrm>
+          <a:prstGeom prst="roundRect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:solidFill>
+            <a:srgbClr val="FFF2CC"/>
+          </a:solidFill>
+          <a:ln w="25400">
+            <a:solidFill>
+              <a:srgbClr val="FFC000"/>
+            </a:solidFill>
+          </a:ln>
+        </p:spPr>
+        <p:style>
+          <a:lnRef idx="1">
+            <a:schemeClr val="accent1"/>
+          </a:lnRef>
+          <a:fillRef idx="3">
+            <a:schemeClr val="accent1"/>
+          </a:fillRef>
+          <a:effectRef idx="2">
+            <a:schemeClr val="accent1"/>
+          </a:effectRef>
+          <a:fontRef idx="minor">
+            <a:schemeClr val="lt1"/>
+          </a:fontRef>
+        </p:style>
+        <p:txBody>
+          <a:bodyPr rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr algn="ctr">
+              <a:defRPr sz="1400" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="C00000"/>
+                </a:solidFill>
+              </a:defRPr>
+            </a:pPr>
+            <a:r>
+              <a:rPr dirty="0">
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t xml:space="preserve">★ 第1弾 </a:t>
+            </a:r>
+            <a:r>
+              <a:rPr dirty="0" err="1">
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>公演</a:t>
+            </a:r>
+            <a:endParaRPr dirty="0">
+              <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="ctr">
+              <a:defRPr sz="2000" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+              </a:defRPr>
+            </a:pPr>
+            <a:r>
+              <a:rPr dirty="0">
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>「</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr dirty="0" err="1">
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>エンドレス・ラブ</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr dirty="0">
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>」</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="zh-TW" altLang="en-US" sz="1200" dirty="0">
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t xml:space="preserve">（徳間書店） </a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" sz="1200" dirty="0">
+              <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+            </a:endParaRPr>
+          </a:p>
+          <a:p>
+            <a:pPr algn="ctr">
+              <a:defRPr sz="2000" b="1">
+                <a:solidFill>
+                  <a:srgbClr val="000000"/>
+                </a:solidFill>
+              </a:defRPr>
+            </a:pPr>
+            <a:r>
+              <a:rPr sz="1200" dirty="0">
+                <a:latin typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+                <a:ea typeface="游明朝" panose="02020400000000000000" pitchFamily="18" charset="-128"/>
+              </a:rPr>
+              <a:t>11月または12月想定</a:t>
+            </a:r>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>

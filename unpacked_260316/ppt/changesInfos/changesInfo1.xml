@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pc:chgInfo xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:ac="http://schemas.microsoft.com/office/drawing/2013/main/command" xmlns:pc="http://schemas.microsoft.com/office/powerpoint/2013/main/command">
+  <pc:docChgLst>
+    <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}"/>
+    <pc:docChg chg="undo custSel delSld modSld">
+      <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-03-16T09:17:25.079" v="215" actId="1076"/>
+      <pc:docMkLst>
+        <pc:docMk/>
+      </pc:docMkLst>
+      <pc:sldChg chg="addSp modSp mod">
+        <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T05:37:07.020" v="13" actId="1076"/>
+        <pc:sldMkLst>
+          <pc:docMk/>
+          <pc:sldMk cId="0" sldId="256"/>
+        </pc:sldMkLst>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T05:36:46.431" v="9" actId="20577"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="256"/>
+            <ac:spMk id="2" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:picChg chg="add mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T05:37:07.020" v="13" actId="1076"/>
+          <ac:picMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="256"/>
+            <ac:picMk id="4" creationId="{A5578B1E-9D12-06AA-4450-9F904AFE8B29}"/>
+          </ac:picMkLst>
+        </pc:picChg>
+      </pc:sldChg>
+      <pc:sldChg chg="modSp mod">
+        <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T05:41:00.250" v="55" actId="14100"/>
+        <pc:sldMkLst>
+          <pc:docMk/>
+          <pc:sldMk cId="0" sldId="259"/>
+        </pc:sldMkLst>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T05:41:00.250" v="55" actId="14100"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="259"/>
+            <ac:spMk id="4" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+      </pc:sldChg>
+      <pc:sldChg chg="modSp mod">
+        <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-03-16T09:15:32.527" v="193" actId="6549"/>
+        <pc:sldMkLst>
+          <pc:docMk/>
+          <pc:sldMk cId="0" sldId="260"/>
+        </pc:sldMkLst>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-03-16T09:15:32.527" v="193" actId="6549"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="260"/>
+            <ac:spMk id="6" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+      </pc:sldChg>
+      <pc:sldChg chg="del">
+        <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-03-16T09:15:46.823" v="194" actId="47"/>
+        <pc:sldMkLst>
+          <pc:docMk/>
+          <pc:sldMk cId="0" sldId="261"/>
+        </pc:sldMkLst>
+      </pc:sldChg>
+      <pc:sldChg chg="modSp mod">
+        <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-03-16T09:15:52.671" v="195" actId="20577"/>
+        <pc:sldMkLst>
+          <pc:docMk/>
+          <pc:sldMk cId="0" sldId="262"/>
+        </pc:sldMkLst>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-03-16T09:15:52.671" v="195" actId="20577"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="262"/>
+            <ac:spMk id="2" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T06:23:46.630" v="102" actId="1076"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="262"/>
+            <ac:spMk id="4" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T06:23:52.644" v="103" actId="1076"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="262"/>
+            <ac:spMk id="5" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T15:07:51.977" v="192" actId="20577"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="262"/>
+            <ac:spMk id="6" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:picChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T06:25:31.708" v="118" actId="1076"/>
+          <ac:picMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="262"/>
+            <ac:picMk id="9" creationId="{F5D16F15-CF7E-1103-7CF0-BCDFAB769502}"/>
+          </ac:picMkLst>
+        </pc:picChg>
+      </pc:sldChg>
+      <pc:sldChg chg="delSp modSp mod">
+        <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-03-16T09:17:25.079" v="215" actId="1076"/>
+        <pc:sldMkLst>
+          <pc:docMk/>
+          <pc:sldMk cId="0" sldId="263"/>
+        </pc:sldMkLst>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-03-16T09:16:25.173" v="200" actId="1076"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="263"/>
+            <ac:spMk id="9" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-03-16T09:17:25.079" v="215" actId="1076"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="263"/>
+            <ac:spMk id="11" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:picChg chg="del">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-03-16T09:16:07.592" v="196" actId="478"/>
+          <ac:picMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="263"/>
+            <ac:picMk id="15" creationId="{12186A3A-24ED-5335-C960-412A83BCC24E}"/>
+          </ac:picMkLst>
+        </pc:picChg>
+      </pc:sldChg>
+      <pc:sldChg chg="modSp mod">
+        <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T05:41:34.494" v="74" actId="14100"/>
+        <pc:sldMkLst>
+          <pc:docMk/>
+          <pc:sldMk cId="0" sldId="264"/>
+        </pc:sldMkLst>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T05:41:30.922" v="73" actId="14100"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="264"/>
+            <ac:spMk id="11" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T05:41:34.494" v="74" actId="14100"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="264"/>
+            <ac:spMk id="12" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+      </pc:sldChg>
+      <pc:sldChg chg="modSp mod">
+        <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T15:04:42.401" v="183" actId="6549"/>
+        <pc:sldMkLst>
+          <pc:docMk/>
+          <pc:sldMk cId="0" sldId="265"/>
+        </pc:sldMkLst>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T15:04:12.836" v="179" actId="1076"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="265"/>
+            <ac:spMk id="5" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T15:04:27.354" v="181" actId="1076"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="265"/>
+            <ac:spMk id="6" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T15:04:04.926" v="175" actId="1076"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="265"/>
+            <ac:spMk id="7" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T15:04:42.401" v="183" actId="6549"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="265"/>
+            <ac:spMk id="12" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:graphicFrameChg chg="mod modGraphic">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T15:04:35.008" v="182" actId="1076"/>
+          <ac:graphicFrameMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="0" sldId="265"/>
+            <ac:graphicFrameMk id="11" creationId="{00000000-0000-0000-0000-000000000000}"/>
+          </ac:graphicFrameMkLst>
+        </pc:graphicFrameChg>
+      </pc:sldChg>
+      <pc:sldChg chg="modSp mod">
+        <pc:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T06:21:23.344" v="92" actId="20577"/>
+        <pc:sldMkLst>
+          <pc:docMk/>
+          <pc:sldMk cId="2736890004" sldId="266"/>
+        </pc:sldMkLst>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T06:19:51.189" v="84" actId="207"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="2736890004" sldId="266"/>
+            <ac:spMk id="5" creationId="{FBE7C8A8-D470-1DCE-549D-7ED7C170C12D}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+        <pc:spChg chg="mod">
+          <ac:chgData name="直輝 津田" userId="202715ae22407d59" providerId="LiveId" clId="{AE38DC39-DE63-42B1-BFF0-B82CEA500A76}" dt="2026-02-28T06:21:23.344" v="92" actId="20577"/>
+          <ac:spMkLst>
+            <pc:docMk/>
+            <pc:sldMk cId="2736890004" sldId="266"/>
+            <ac:spMk id="6" creationId="{5D4B46A1-67FB-14B6-E040-3BD651AADE42}"/>
+          </ac:spMkLst>
+        </pc:spChg>
+      </pc:sldChg>
+    </pc:docChg>
+  </pc:docChgLst>
+</pc:chgInfo>

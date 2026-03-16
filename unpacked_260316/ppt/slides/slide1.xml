@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld name="Slide 1">
+    <p:spTree>
+      <p:nvGrpSpPr>
+        <p:cNvPr id="1" name=""/>
+        <p:cNvGrpSpPr/>
+        <p:nvPr/>
+      </p:nvGrpSpPr>
+      <p:grpSpPr>
+        <a:xfrm>
+          <a:off x="0" y="0"/>
+          <a:ext cx="0" cy="0"/>
+          <a:chOff x="0" y="0"/>
+          <a:chExt cx="0" cy="0"/>
+        </a:xfrm>
+      </p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="2" name="Text 0"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="0" y="1371600"/>
+            <a:ext cx="9144000" cy="548640"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="0" indent="0" algn="ctr">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" sz="1600" dirty="0" err="1">
+                <a:solidFill>
+                  <a:srgbClr val="666666"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>直木賞作家・姫野カオルコプロデュース</a:t>
+            </a:r>
+            <a:r>
+              <a:rPr lang="ja-JP" altLang="en-US" sz="1600" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="666666"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>企画</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" sz="1600" dirty="0"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr>
+          <p:cNvPr id="3" name="Text 1"/>
+          <p:cNvSpPr/>
+          <p:nvPr/>
+        </p:nvSpPr>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="0" y="2023110"/>
+            <a:ext cx="9144000" cy="1097280"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+          <a:noFill/>
+          <a:ln/>
+        </p:spPr>
+        <p:txBody>
+          <a:bodyPr wrap="square" rtlCol="0" anchor="ctr"/>
+          <a:lstStyle/>
+          <a:p>
+            <a:pPr marL="0" indent="0" algn="ctr">
+              <a:buNone/>
+            </a:pPr>
+            <a:r>
+              <a:rPr lang="en-US" sz="5400" b="1" kern="0" spc="400" dirty="0">
+                <a:solidFill>
+                  <a:srgbClr val="333333"/>
+                </a:solidFill>
+                <a:latin typeface="Yu Mincho" pitchFamily="34" charset="0"/>
+                <a:ea typeface="Yu Mincho" pitchFamily="34" charset="-122"/>
+                <a:cs typeface="Yu Mincho" pitchFamily="34" charset="-120"/>
+              </a:rPr>
+              <a:t>聞き耳アワーシリーズ</a:t>
+            </a:r>
+            <a:endParaRPr lang="en-US" sz="5400" dirty="0"/>
+          </a:p>
+        </p:txBody>
+      </p:sp>
+      <p:pic>
+        <p:nvPicPr>
+          <p:cNvPr id="4" name="図 3" descr="ロゴ&#10;&#10;AI 生成コンテンツは誤りを含む可能性があります。">
+            <a:extLst>
+              <a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+                <a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{A5578B1E-9D12-06AA-4450-9F904AFE8B29}"/>
+              </a:ext>
+            </a:extLst>
+          </p:cNvPr>
+          <p:cNvPicPr>
+            <a:picLocks noChangeAspect="1"/>
+          </p:cNvPicPr>
+          <p:nvPr/>
+        </p:nvPicPr>
+        <p:blipFill>
+          <a:blip r:embed="rId3">
+            <a:alphaModFix/>
+            <a:extLst>
+              <a:ext uri="{BEBA8EAE-BF5A-486C-A8C5-ECC9F3942E4B}">
+                <a14:imgProps xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+                  <a14:imgLayer r:embed="rId4">
+                    <a14:imgEffect>
+                      <a14:backgroundRemoval t="10000" b="90000" l="10000" r="90000">
+                        <a14:foregroundMark x1="14991" y1="45833" x2="14991" y2="45833"/>
+                        <a14:foregroundMark x1="18954" y1="63646" x2="19090" y2="61667"/>
+                        <a14:foregroundMark x1="19973" y1="56667" x2="19973" y2="55729"/>
+                        <a14:foregroundMark x1="19973" y1="51354" x2="19973" y2="51354"/>
+                        <a14:foregroundMark x1="19973" y1="50208" x2="19973" y2="50208"/>
+                        <a14:foregroundMark x1="22781" y1="61458" x2="22781" y2="61458"/>
+                        <a14:foregroundMark x1="25136" y1="64479" x2="25611" y2="60521"/>
+                        <a14:foregroundMark x1="26042" y1="54583" x2="25951" y2="49063"/>
+                        <a14:foregroundMark x1="29144" y1="60729" x2="29914" y2="63229"/>
+                        <a14:foregroundMark x1="32835" y1="63854" x2="34171" y2="51250"/>
+                        <a14:foregroundMark x1="28578" y1="52188" x2="29099" y2="43542"/>
+                        <a14:foregroundMark x1="39583" y1="62500" x2="38383" y2="64479"/>
+                        <a14:foregroundMark x1="39968" y1="56979" x2="38859" y2="53750"/>
+                        <a14:foregroundMark x1="44656" y1="51563" x2="44656" y2="51563"/>
+                        <a14:foregroundMark x1="47192" y1="27083" x2="47192" y2="27083"/>
+                        <a14:foregroundMark x1="52219" y1="51042" x2="52219" y2="51042"/>
+                        <a14:foregroundMark x1="52264" y1="51979" x2="53510" y2="50625"/>
+                        <a14:foregroundMark x1="57631" y1="50625" x2="57631" y2="46250"/>
+                        <a14:foregroundMark x1="61458" y1="62083" x2="60870" y2="59271"/>
+                        <a14:foregroundMark x1="68252" y1="61458" x2="68388" y2="54167"/>
+                        <a14:foregroundMark x1="72169" y1="42500" x2="72328" y2="51979"/>
+                        <a14:foregroundMark x1="75725" y1="44271" x2="75340" y2="53958"/>
+                        <a14:foregroundMark x1="78261" y1="53958" x2="80548" y2="49583"/>
+                        <a14:foregroundMark x1="83899" y1="40938" x2="83379" y2="57708"/>
+                        <a14:foregroundMark x1="88723" y1="45521" x2="89697" y2="53229"/>
+                        <a14:foregroundMark x1="47826" y1="47083" x2="47713" y2="57917"/>
+                        <a14:foregroundMark x1="79008" y1="42500" x2="79008" y2="42500"/>
+                        <a14:foregroundMark x1="44950" y1="40521" x2="44950" y2="40521"/>
+                        <a14:foregroundMark x1="44995" y1="40104" x2="44995" y2="40104"/>
+                        <a14:foregroundMark x1="44950" y1="40521" x2="44950" y2="40521"/>
+                        <a14:foregroundMark x1="44995" y1="40104" x2="44995" y2="40104"/>
+                        <a14:foregroundMark x1="44905" y1="40104" x2="44905" y2="40104"/>
+                        <a14:foregroundMark x1="44995" y1="39896" x2="44995" y2="39896"/>
+                        <a14:foregroundMark x1="45086" y1="40313" x2="45086" y2="40313"/>
+                        <a14:foregroundMark x1="44950" y1="40313" x2="44950" y2="40313"/>
+                        <a14:foregroundMark x1="44995" y1="39896" x2="44995" y2="39896"/>
+                        <a14:foregroundMark x1="60213" y1="47083" x2="60213" y2="47083"/>
+                        <a14:foregroundMark x1="44905" y1="38750" x2="44860" y2="40104"/>
+                        <a14:backgroundMark x1="38247" y1="46458" x2="38202" y2="44271"/>
+                        <a14:backgroundMark x1="39629" y1="50833" x2="39629" y2="50833"/>
+                        <a14:backgroundMark x1="39719" y1="50208" x2="39719" y2="50208"/>
+                        <a14:backgroundMark x1="43546" y1="46250" x2="43546" y2="46250"/>
+                        <a14:backgroundMark x1="55910" y1="52188" x2="55910" y2="52188"/>
+                        <a14:backgroundMark x1="56091" y1="50833" x2="56091" y2="50833"/>
+                        <a14:backgroundMark x1="55707" y1="52604" x2="55707" y2="52604"/>
+                        <a14:backgroundMark x1="65716" y1="45313" x2="65716" y2="45313"/>
+                        <a14:backgroundMark x1="65897" y1="44688" x2="65897" y2="44688"/>
+                        <a14:backgroundMark x1="66055" y1="64896" x2="66055" y2="64896"/>
+                        <a14:backgroundMark x1="66010" y1="64688" x2="66010" y2="64688"/>
+                        <a14:backgroundMark x1="84579" y1="56771" x2="84579" y2="56771"/>
+                        <a14:backgroundMark x1="84624" y1="46458" x2="84624" y2="46458"/>
+                        <a14:backgroundMark x1="84511" y1="43854" x2="84511" y2="43854"/>
+                        <a14:backgroundMark x1="89017" y1="43125" x2="89017" y2="43125"/>
+                        <a14:backgroundMark x1="84466" y1="60938" x2="84466" y2="60938"/>
+                        <a14:backgroundMark x1="79393" y1="45521" x2="79393" y2="45521"/>
+                        <a14:backgroundMark x1="34035" y1="64063" x2="34035" y2="64063"/>
+                        <a14:backgroundMark x1="34081" y1="63854" x2="34081" y2="63854"/>
+                        <a14:backgroundMark x1="34126" y1="63229" x2="34126" y2="63229"/>
+                        <a14:backgroundMark x1="45290" y1="39896" x2="45290" y2="39896"/>
+                        <a14:backgroundMark x1="46716" y1="41563" x2="46716" y2="41563"/>
+                        <a14:backgroundMark x1="40399" y1="66042" x2="40308" y2="64063"/>
+                      </a14:backgroundRemoval>
+                    </a14:imgEffect>
+                  </a14:imgLayer>
+                </a14:imgProps>
+              </a:ext>
+            </a:extLst>
+          </a:blip>
+          <a:stretch>
+            <a:fillRect/>
+          </a:stretch>
+        </p:blipFill>
+        <p:spPr>
+          <a:xfrm>
+            <a:off x="3045468" y="4225791"/>
+            <a:ext cx="3053063" cy="663709"/>
+          </a:xfrm>
+          <a:prstGeom prst="rect">
+            <a:avLst/>
+          </a:prstGeom>
+        </p:spPr>
+      </p:pic>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr>
+    <a:masterClrMapping/>
+  </p:clrMapOvr>
+</p:sld>
